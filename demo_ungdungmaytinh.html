@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính đơn giản</title>
+</head>
+<body>
+    <div class="form">
+        <input type="text" id="x" onchange="getX()">
+        <input type="text" id="y" onchange="getY()">
+    </div>
+
+    <div class="button">
+        <button id="addition" onclick="add()">Addition(+)</button>
+        <button id="subtraction" onclick="sub()">Subtraction(-)</button>
+        <button id="multiplication" onclick="mul()">Multiplication(X)</button>
+        <button id="division" onclick="div()">Division(/)</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let x=y=0;
+        let result;
+        function getX(){
+            x = parseFloat(document.getElementById("x").value);
+            return x;
+        }
+        function getY(){
+            y = parseFloat(document.getElementById("y").value);
+            return y;
+        }
+
+        function add() {
+            result = x + y;
+            document.getElementById("result").innerHTML = "Result : " + result;
+        }
+
+        function sub() {
+            result = x - y;
+            document.getElementById("result").innerHTML = "Result : " + result;
+        }
+
+        function mul() {
+            result = x * y;
+            document.getElementById("result").innerHTML = "Result : " + result;
+        }
+
+        function div() {
+            result = x / y;
+            document.getElementById("result").innerHTML = "Result : " + result;
+        }
+
+
+    </script>
+</body>
+</html>
